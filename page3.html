@@ -12,12 +12,35 @@
                 <ul>
                     <li><a href=page1.html>Home</a></li>
                     <li><a href=page2.html>About</a></li>
-                    <li><a href=page3.html>Gallery</a></li>
+                    <li><a href=page3.html>Contact us</a></li>
                 </ul>
         </nav>
         <main>
-            <h1>Gallery</h1>
-            <img src=""
+            <h1>Contact us</h1>
+            <form action="/contact" method="post">
+                <fieldset>
+                    <legend>Conact Form</legend>
+                    <label>Enter your full name</label>
+                    <input type="text" name="name"><br>
+                    <label>Enter your email</label><br>
+                    <input type="email" name="email"><br>
+                    <label>Enter your phone number</label>
+                    <input type="text" name="phone"><br>
+                    <br><label>How should we contact you></label><br>
+                    <input type="radio" name="name" value="Email">
+                    <input type="radio" name="name" value="Phone">
+
+                    <br><label>Which dog are you inquiring for?</label><br>
+                        <select>
+                            <option>Luca</option>
+                            <option>Guiness</option>
+                            <option>Athena</option>
+                        </select><br>
+                        <br>How did you hear about us?<br>
+                        <textarea rows="5" cols="30"></textarea><br>
+                        <input type="submit" value="Inquire"></input>
+                </fieldset>
+            </form>
         </main>
     </div>
     
