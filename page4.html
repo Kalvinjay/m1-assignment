@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalvin's first web page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container">
+        <header style="font-size: 45px; color:#fff"> Winnipeg Humane Society</header>
+        <nav>
+            <ul>
+                <li><a href=page1.html>Home</a></li>
+                <li><a href=page2.html>About</a></li>
+                <li><a href=page4.html>Gallery</a></li>
+                <li><a href=page3.html>Contact us</a></li>
+            </ul>
+        </nav>
+        <main>
+            <h2>Welcome to the Gallery</h2>
+            <p>Enjoy these beautiful pictures of these dogs waiting their turn to get adopted or have already been adopted:</p>
+        </main>
+        <section>
+            <ul id="album">
+               <!-- <li id="photo"><img src="images/petadoption1.jpg"></li>
+                <caption class="petadoptphoto1">Create bonds</caption>
+                <p class="petphotoadoptdesc1"> Create bonds that will last a lifetime.</p>
+                <li id="photo"><img src="images/petadoption2.jpg"></li>
+                <li id="photo"><img src="images/petadoption3.jpg"></li>
+                <li id="photo"><img src="images/petadoption4.jpg"></li>
+                <li id="photo"><img src="images/petadoption5.jpg"></li>
+                <li id="photo"><img src="images/petadoption6.jpg"></li>
+                <li id="photo"><img src="images/petadoption7.jpg"></li>
+                <li id="photo"><img src="images/petadoption8.jpg"></li>
+                <li id="photo"><img src="images/petadoption9.jpg"></li>
+                <li id="photo"><img src="images/petadoption10.jpg"></li> -->
+        </section>
+        <footer>&copy; Copyright 2022</footer>
+    </div>
+    <script>
+        var photos = [];
+        var fileNames = [];
+        var imageList =[];
+        var openList1 = "<li id='photo";
+        var openList2 = "'>"
+        var closeList = "</li>";
+        var openCaptionTag = "<caption id='petadoptphoto1'>";
+        var closeCaptionTag = "</caption>";
+        var openDescTag = "<p id='petphotoadoptdesc1'>";
+        var closeDescTag = "</p>";
+        var captions = ["Create bonds","Waiting","Greeting","Siblings","Puppies","Loneliness","Own Space","Water","Full","Workers"];
+        var descriptions = ["Create bonds that will last forever","Waiting to be adopted","Greeting new parents with kisses","You can also adopt siblings","Even puppies are available for adoption","Most dogs waiting a long time to be adopted are lonely","Each dog is given its own crate/personal space","Every dog gets their own water bowl","Shelters sometimes run out of space for dogs","Workers show endless love for these dogs"]
+
+        for (var i=0; i<10; i++) {
+            fileNames.push("petadoption"+(i+1));
+            photos.push("<img class='photos' src='images/" + fileNames[i] + ".jpg'>" );
+            image = openList1 + (i+1) + openList2 + photos[i] + openCaptionTag + captions[i] + closeCaptionTag + descriptions[i] + closeList;
+            imageList.push(image);
+        }
+
+        document.getElementById("album").innerHTML = imageList.join(" ");
+
+
+
+    </script>
+
+</body>
+</html>

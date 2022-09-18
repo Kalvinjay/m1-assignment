@@ -82,6 +82,21 @@ input[type="submit"] {
     margin: 20px 0 10px 0;   
     width: 100px;
 }
+main #album #photo img {
+    width: 400px;
+}
+.album {
+    position: relative;
+    width: 400px;
+}
+.photos{
+    display: block;
+    width: 50%;
+}
+.descriptions{
+    position: absolute;
+}
+ 
 footer{
     height: 40;
     background-color: rgb(129, 141, 179);
