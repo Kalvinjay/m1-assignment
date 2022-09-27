@@ -36,6 +36,39 @@
                 <li id="photo"><img src="images/petadoption10.jpg"></li> -->
             </ul>
         </section>
+        <div class="popupcontainer">
+            <div class="popup">
+            <h1 class="popup-title">Create bonds</h1>
+            <p class="popup-info">Most shelter dogs are looking to create an unbreakable bond with its new owner.</p>
+
+            <h1 class="popup-title">Waiting</h1>
+            <p class="popup-info">Most shelter dogs spends indefinite amount of time waiting to be adopted</p>
+
+            <h1 class="popup-title">Greetings</h1>
+            <p class="popup-info">The reaction from puppies/dogs being adopted is an unexplainable feeling</p>
+
+            <h1 class="popup-title">Siblings</h1>
+            <p class="popup-info">Sometimes you may find siblings that have can be adopted all together</p>
+
+            <h1 class="popup-title">Puppies</h1>
+            <p class="popup-info">Sometimes you may find new born puppies who are available for adoption</p>
+
+            <h1 class="popup-title">Loneliness</h1>
+            <p class="popup-info">Shelter dogs may spend weeks/months/years waitng to be adopted which causes to feel lonely</p>
+
+            <h1 class="popup-title">Own Space</h1>
+            <p class="popup-info">Some dogs don't get along with other dogs so having their own space is extremely important</p>
+
+            <h1 class="popup-title">Water</h1>
+            <p class="popup-info">Some dogs have food anger when people/other dogs touvh their water so they are given their own water</p>
+
+            <h1 class="popup-title">Full</h1>
+            <p class="popup-info">Most animal shelters are over capacity so maybe you would consider adopting a shelter dog</p>
+
+            <h1 class="popup-title">Workers</h1>
+            <p class="popup-info">These workers create bonds with all the dogs doing thier best to make sure they don't feel lonely</p>
+            </div>
+        </div>
         <footer>&copy; Copyright 2022</footer>
     </div>
     <script>
@@ -43,7 +76,7 @@
         var fileNames = [];
         var imageList =[];
         var openList1 = "<li class='photo";
-        var openList2 = "'>"
+        var openList2 = "'>";
         var closeList = "</li>";
         var openCaptionTag = "<p class='petadoptphoto1'>";
         var closeCaptionTag = "</p>";
@@ -58,9 +91,10 @@
             image = openList1 + openList2 + photos[i] + openCaptionTag + captions[i] + closeCaptionTag + openDescTag + descriptions[i] + closeDescTag + closeList;
             imageList.push(image);
         }
-
         document.getElementById("album").innerHTML = imageList.join(" ");
-
+    </script>
+    <script>
+        
     </script>
 </body>
 </html>
