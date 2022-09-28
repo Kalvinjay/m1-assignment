@@ -24,13 +24,26 @@
                     <legend>Conact Form</legend>
                     <label>Enter your full name</label>
                     <input type="text" name="name"><br>
+                    <div class="radios">
+                        <br><label>Select your gender</label><br>
+                        <input type="radio" name="contact" value="Male" checked>Male
+                        <input type="radio" name="contact" value="Female">Female
+                    </div>
+                    <div class="select-phone-email">
+                        <br><label>How should we contact you?</label><br>
+                        <select id="demo">
+                            <option>Select one</option>
+                            <option id="emailorphone" onclick="myFunction">Email</option>
+                            <option id="emailorphone">Phone</option>
+                        </select>
+                    </div>
                     <label>Enter your email</label><br>
-                    <input type="email" name="email"><br>
+                    <input type="email" name="email" id="EPFunction()"><br>
                     <label>Enter your phone number</label>
-                    <input type="text" name="phone"><br>
-                    <br><label>How should we contact you></label><br>
-                    <input type="radio" name="name" value="Email">
-                    <input type="radio" name="name" value="Phone">
+                    <input type="text" name="phone" id="EPFunction()"><br>
+                    <!-- <br><label>How should we contact you?</label><br>
+                    <input type="radio" name="name" value="Email">Email
+                    <input type="radio" name="name" value="Phone">Phone -->
 
                     <br><label>Which dog are you inquiring for?</label><br>
                         <select>
@@ -47,4 +60,7 @@
     </div>
     
 </body>
+<script>
+    
+</script>
 </html>

@@ -37,7 +37,7 @@
             </ul>
         </section>
         <div class="popupcontainer">
-            <div class="popup">
+            <div class="popup" id="popup">
             <h1 class="popup-title">Create bonds</h1>
             <p class="popup-info">Most shelter dogs are looking to create an unbreakable bond with its new owner.</p>
 
@@ -80,7 +80,7 @@
         var closeList = "</li>";
         var openCaptionTag = "<p class='petadoptphoto1'>";
         var closeCaptionTag = "</p>";
-        var openDescTag = "<p class='petphotoadoptdesc1'>";
+        var openDescTag = "<p class='petphotoadoptdesc1' onclick='openpopup'>";
         var closeDescTag = "</p>";
         var captions = ["Create bonds","Waiting","Greeting","Siblings","Puppies","Loneliness","Own Space","Water","Full","Workers"];
         var descriptions = ["Create bonds that will last forever","Waiting to be adopted","Greeting new parents with kisses","You can also adopt siblings","Even puppies are available for adoption","Most dogs wait a long time to be adopted are lonely","Each dog is given its own crate/personal space","Every dog gets their own water bowl","Shelters sometimes run out of space for dogs","Workers show endless love for these dogs"]
@@ -94,7 +94,11 @@
         document.getElementById("album").innerHTML = imageList.join(" ");
     </script>
     <script>
-        
+        let popup = document.GetElementById("popup");
+
+        function openpopup() {
+            popup.classList.add("openpopup");
+        }
     </script>
 </body>
 </html>
