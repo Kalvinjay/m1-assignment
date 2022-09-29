@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kalvins first lab assignment</title>
     <link rel="stylesheet" href="style.css">
+    <script src="js/contactform.js"></script>
 </head>
 <body>
     <div id="container">
@@ -26,22 +27,22 @@
                     <input type="text" name="name"><br>
                     <div class="radios">
                         <br><label>Select your gender</label><br>
-                        <input type="radio" name="contact" value="Male" checked>Male
+                        <input type="radio" name="contact" value="Male">Male
                         <input type="radio" name="contact" value="Female">Female
                     </div>
                     <div class="select-phone-email">
                         <br><label>How should we contact you?</label><br>
-                        <select id="demo">
+                        <select id="selectContact">
                             <option>Select one</option>
-                            <option id="emailorphone" onclick="myFunction">Email</option>
-                            <option id="emailorphone">Phone</option>
+                            <option id="optionEmail">Email</option>
+                            <option id="optionPhone">Phone</option>
                         </select>
                     </div>
-                    <label>Enter your email</label><br>
-                    <input type="email" name="email" id="EPFunction()"><br>
-                    <label>Enter your phone number</label>
-                    <input type="text" name="phone" id="EPFunction()"><br>
-                    <!-- <br><label>How should we contact you?</label><br>
+                   <label for="email">Enter your email</label><br>
+                    <input type="email" name="email" id="email"><br>
+                    <label for="phone">Enter your phone number</label>
+                    <input type="text" name="phone" id="phone"><br>
+                   <!--  <br><label>How should we contact you?</label><br>
                     <input type="radio" name="name" value="Email">Email
                     <input type="radio" name="name" value="Phone">Phone -->
 
@@ -60,7 +61,4 @@
     </div>
     
 </body>
-<script>
-    
-</script>
 </html>
