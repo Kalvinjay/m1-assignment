@@ -1,7 +1,5 @@
 
     function ShowHideDiv() {
-        var contact = document.getElementById("selectContact");
-        var selected = contact.options[contact.selectedIndex].text;
         var selectEmail = document.getElementById("optionEmail");
         var selectPhone = document.getElementById("optionPhone");
         var inputEmail = document.getElementById("email");

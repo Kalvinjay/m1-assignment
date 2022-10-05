@@ -23,7 +23,8 @@
             <p>Enjoy these beautiful pictures of these dogs waiting their turn to get adopted or have already been adopted:</p>
         </main>
         <section>
-            <ul id="album">
+            <div id="popupcontainer">
+                <ul id="album">
                <!-- <li id="photo"><img src="images/petadoption1.jpg"></li>
                 <li id="photo"><img src="images/petadoption2.jpg"></li>
                 <li id="photo"><img src="images/petadoption3.jpg"></li>
@@ -35,40 +36,59 @@
                 <li id="photo"><img src="images/petadoption9.jpg"></li>
                 <li id="photo"><img src="images/petadoption10.jpg"></li> -->
             </ul>
+            </div>
         </section>
-        <div class="popupcontainer">
-            <div class="popup" id="popup">
+        
+            <!-- <div id="popup1">
             <h1 class="popup-title">Create bonds</h1>
             <p class="popup-info">Most shelter dogs are looking to create an unbreakable bond with its new owner.</p>
+            </div>
 
+            <div id="popup2">
             <h1 class="popup-title">Waiting</h1>
             <p class="popup-info">Most shelter dogs spends indefinite amount of time waiting to be adopted</p>
+            </div>
 
+            <div id="popup3">
             <h1 class="popup-title">Greetings</h1>
             <p class="popup-info">The reaction from puppies/dogs being adopted is an unexplainable feeling</p>
+            </div>
 
+            <div id="popup4">
             <h1 class="popup-title">Siblings</h1>
             <p class="popup-info">Sometimes you may find siblings that have can be adopted all together</p>
+            </div>
 
+            <div id="popup5">
             <h1 class="popup-title">Puppies</h1>
             <p class="popup-info">Sometimes you may find new born puppies who are available for adoption</p>
+            </div>
 
+            <div id="popup6">
             <h1 class="popup-title">Loneliness</h1>
             <p class="popup-info">Shelter dogs may spend weeks/months/years waitng to be adopted which causes to feel lonely</p>
+            </div>
 
+            <div id="popup7">
             <h1 class="popup-title">Own Space</h1>
             <p class="popup-info">Some dogs don't get along with other dogs so having their own space is extremely important</p>
+            </div>
 
+            <div id="popup8">
             <h1 class="popup-title">Water</h1>
             <p class="popup-info">Some dogs have food anger when people/other dogs touvh their water so they are given their own water</p>
+            </div>
 
+            <div id="popup9">
             <h1 class="popup-title">Full</h1>
             <p class="popup-info">Most animal shelters are over capacity so maybe you would consider adopting a shelter dog</p>
+            </div>
 
+            <div id="popup10">
             <h1 class="popup-title">Workers</h1>
             <p class="popup-info">These workers create bonds with all the dogs doing thier best to make sure they don't feel lonely</p>
-            </div>
-        </div>
+            </div> -->
+    
         <footer>&copy; Copyright 2022</footer>
     </div>
     <script>
@@ -80,25 +100,49 @@
         var closeList = "</li>";
         var openCaptionTag = "<p class='petadoptphoto1'>";
         var closeCaptionTag = "</p>";
-        var openDescTag = "<p class='petphotoadoptdesc1' onclick='openpopup'>";
+        var openDescTag = "<p class='petphotoadoptdesc1' onclick='openpopup()'>";
         var closeDescTag = "</p>";
         var captions = ["Create bonds","Waiting","Greeting","Siblings","Puppies","Loneliness","Own Space","Water","Full","Workers"];
         var descriptions = ["Create bonds that will last forever","Waiting to be adopted","Greeting new parents with kisses","You can also adopt siblings","Even puppies are available for adoption","Most dogs wait a long time to be adopted are lonely","Each dog is given its own crate/personal space","Every dog gets their own water bowl","Shelters sometimes run out of space for dogs","Workers show endless love for these dogs"];
-
+       
+        var popups = [];
+        var pop = [];
+        var popuplist = [];
+        var openList3 = "<div id='popup";
+        var openList4 = "'>";
+        var closeList2 = "</div>"
+        var openCaptionTag2 = "<caption class='popup-title'>";
+        var closeCaptionTag2 = "</caption>";
+        var openDescTag2 = "<p class='popup-info'>";
+        var closeDescTag2 = "</p>";
+        var captions2 = ["Create bonds","Waiting","Greeting","Siblings","Puppies","Loneliness","Own Space","Water","Full","Workers"];
+        var descriptions2 = ["Most shelter dogs are looking to create an unbreakable bond with its new owner.","Most shelter dogs spends indefinite amount of time waiting to be adopted",
+                            "The reaction from puppies/dogs being adopted is an unexplainable feeling","Sometimes you may find siblings that have can be adopted all together",
+                            "Sometimes you may find new born puppies who are available for adoption","Shelter dogs may spend weeks/months/years waitng to be adopted which causes to feel lonely",
+                            "Some dogs don't get along with other dogs so having their own space is extremely important","Some dogs have food anger when people/other dogs touvh their water so they are given their own water",
+                            "Most animal shelters are over capacity so maybe you would consider adopting a shelter dog","These workers create bonds with all the dogs doing thier best to make sure they don't feel lonely"];
+        
         for (var i=0; i<10; i++) {
             fileNames.push("petadoption"+(i+1));
             photos.push("<img class='photos' src='images/" + fileNames[i] + ".jpg'>" );
             image = openList1 + openList2 + photos[i] + openCaptionTag + captions[i] + closeCaptionTag + openDescTag + descriptions[i] + closeDescTag + closeList;
             imageList.push(image);
-        }
-        document.getElementById("album").innerHTML = imageList.join(" ");
-    </script>
-    <script>
-        let popup = document.GetElementById("popup");
-
-        function openpopup() {
-            popup.classList.add("openpopup");
-        }
+        
+        function openpopup(){
+            popups.push("popup"+(i+1));
+            pop = openList3 + openList4 + openCaptionTag2 + captions2[i] + closeCaptionTag2 + openDescTag2 + descriptions2[i] + closeDescTag2 + closeList2;
+            popuplist.push(pop);
+        };
+    }
+        document.getElementById("album").innerHTML = popuplist + imageList.join(" ");
+//for (var i=0; i<10; ++i) {
+        //function openpopup() {
+            //popups.push("popup"+(i+1));
+            //pop = openList3 + openList4 + openCaptionTag2 + captions2[i] + closeCaptionTag2 + openDescTag2 + descriptions2[i] + closeDescTag2 + closeList2;
+            //popuplist.push(pop);
+         //}
+        //document.getElementById("popup").innerHTML = popuplist.join(" ");
+        //}
     </script>
 </body>
 </html>
