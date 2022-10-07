@@ -120,14 +120,14 @@ footer{
 
 /* Page 4 */
 
-.popupcontainer{
+/*.popupcontainer{
     width: 100%;
     background: #3c5077;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.popup{
+#info_box{
     width: 400px;
     background: #fff;
     border-radius: 6px;
@@ -138,8 +138,8 @@ footer{
     text-align: center;
     padding: 0 30px 30px;
     color: #333;
-    /*visibility: hidden;*/
-}
+    /*visibility: hidden;
+
 .popup h1 {
     font-size: 38px;
     font-weight: 500;
@@ -149,4 +149,35 @@ footer{
     visibility: visible;
     top: 50%;
     transform: translate(-50%, -50%) scale(1);
-}
+}*/
+main #gallery {
+    position: relative;
+  }
+  main #gallery #info_box {
+    position: absolute;
+    top: 200px;
+    left:20%;
+    width: 30%;
+    min-height: 300px;
+    padding: 2em;
+    color:rgb(255, 255, 255,1);
+    border-radius: 1em;
+    background-color: rgba(0, 0, 0, 0.9);
+    visibility: hidden;
+  }
+  main #gallery #info_title {
+    font-size: 2em;
+    font-weight: bolder;
+    margin-bottom: 1em;
+  }
+  main #gallery #closeInfo {
+    text-transform:capitalize;
+    width: 45%;
+    text-align: center;
+    margin: 5em auto 0 auto;
+    font-weight: bold;
+    color:rgb(250, 242, 132);
+  }
+  main #gallery #closeInfo:hover {
+    cursor:pointer;
+  }
